@@ -207,7 +207,7 @@ public class ModSwift {
     // --------------------------------------------------------------------------------------------------
 
     /// Returns package of readCoilsStatuses function (0x01)
-    func readCoilStatus(startAddress: UInt16, numOfCoils: UInt16) -> Data {
+    public func readCoilStatus(startAddress: UInt16, numOfCoils: UInt16) -> Data {
         return createCommand(
             command: .readCoilStatus,
             address: startAddress,
@@ -243,7 +243,7 @@ public class ModSwift {
     }
 
     /// Returns package for force (write) single coil function (0x05)
-    func forceSingleCoil(startAddress: UInt16, value: Bool) -> Data {
+    public func forceSingleCoil(startAddress: UInt16, value: Bool) -> Data {
         return createCommand(
             command: .forceSingleCoil,
             address: startAddress,
